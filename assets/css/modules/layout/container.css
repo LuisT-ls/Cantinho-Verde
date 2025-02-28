@@ -1,0 +1,29 @@
+/* Container CSS */
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+.container-fluid {
+  width: 100%;
+  padding: 0 var(--spacing-lg);
+}
+
+.container-narrow {
+  max-width: 860px;
+}
+
+.container-wide {
+  max-width: 1440px;
+}
+
+@media (max-width: 576px) {
+  .container,
+  .container-fluid,
+  .container-narrow,
+  .container-wide {
+    padding: 0 var(--spacing-md);
+  }
+}

@@ -1,0 +1,33 @@
+/* Scrollbar CSS */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background-alt);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary-light);
+  border-radius: 5px;
+  transition: background var(--transition-fast);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary-light) var(--color-background-alt);
+}
+
+/* Edge */
+@supports (-ms-overflow-style: none) {
+  html {
+    -ms-overflow-style: none;
+  }
+}
