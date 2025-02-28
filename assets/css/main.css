@@ -1,0 +1,13 @@
+/* Estilos globais */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Espaçamento adicional para o footer */
+main {
+  padding-bottom: 60px; /* Evita que o footer cubra o conteúdo */
+}
