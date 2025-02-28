@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Blog Cantinho Verde - Dicas de cultivo, adubações e cuidados com plantas"
+    />
+    <meta
+      name="keywords"
+      content="plantas, cultivo, adubação, jardinagem, cuidados com plantas, blog"
+    />
+    <meta name="author" content="LuisT-ls" />
+
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../assets/img/favicon/favicon-16x16.png"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css" />
+
+    <!-- Manifest -->
+    <link rel="manifest" href="./manifest.json" />
+
+    <title>Blog - Cantinho Verde</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img
+              src="../assets/img/logo.png"
+              alt="Cantinho Verde Logo"
+              width="30"
+              height="30"
+              class="d-inline-block align-text-top"
+            />
+            Cantinho Verde
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Início</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">Sobre</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="blog.html"
+                  >Blog</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contato</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-lg-8">
+            <h1 class="mb-4">Blog</h1>
+
+            <!-- Filtro por categorias (desktop) -->
+            <div class="d-none d-md-block mb-4">
+              <div
+                class="btn-group"
+                role="group"
+                aria-label="Filtrar por categoria"
+              >
+                <button type="button" class="btn btn-success active">
+                  Todas
+                </button>
+                <button type="button" class="btn btn-outline-success">
+                  Suculentas
+                </button>
+                <button type="button" class="btn btn-outline-success">
+                  Orquídeas
+                </button>
+                <button type="button" class="btn btn-outline-success">
+                  Plantas Ornamentais
+                </button>
+                <button type="button" class="btn btn-outline-success">
+                  Adubação
+                </button>
+              </div>
+            </div>
+
+            <!-- Filtro por categorias (mobile) -->
+            <div class="d-md-none mb-4">
+              <select class="form-select" aria-label="Filtrar por categoria">
+                <option selected>Todas as categorias</option>
+                <option value="suculentas">Suculentas</option>
+                <option value="orquideas">Orquídeas</option>
+                <option value="ornamentais">Plantas Ornamentais</option>
+                <option value="adubacao">Adubação</option>
+              </select>
+            </div>
+
+            <!-- Artigos do blog -->
+            <div class="blog-posts">
+              <article class="blog-post card mb-4">
+                <div class="card-body">
+                  <h2 class="blog-post-title">Como cuidar de suculentas</h2>
+                  <p class="blog-post-meta text-muted">
+                    1 de Janeiro, 2025 por <a href="#">LuisT-ls</a> |
+                    <span class="badge bg-success">Suculentas</span>
+                  </p>
+                  <div class="row">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                      <img
+                        src="../assets/img/categories/suculentas/suculenta-vaso.jpg"
+                        alt="Suculentas em vasos"
+                        class="img-fluid rounded"
+                      />
+                    </div>
+                    <div class="col-md-8">
+                      <p>
+                        As suculentas são plantas que armazenam água em suas
+                        folhas, caules e raízes. Elas são fáceis de cuidar e
+                        perfeitas para quem está começando no mundo das plantas.
+                        Neste artigo, vamos explorar os cuidados básicos para
+                        manter suas suculentas saudáveis.
+                      </p>
+                      <a href="#" class="btn btn-primary">Leia mais</a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="blog-post card mb-4">
+                <div class="card-body">
+                  <h2 class="blog-post-title">
+                    Guia completo de orquídeas para iniciantes
+                  </h2>
+                  <p class="blog-post-meta text-muted">
+                    15 de Janeiro, 2025 por <a href="#">Ana Silva</a> |
+                    <span class="badge bg-success">Orquídeas</span>
+                  </p>
+                  <div class="row">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                      <img
+                        src="../assets/img/categories/orquideas/orquideas.jpg"
+                        alt="Orquídea phalaenopsis"
+                        class="img-fluid rounded"
+                      />
+                    </div>
+                    <div class="col-md-8">
+                      <p>
+                        Orquídeas são plantas encantadoras que costumam
+                        intimidar os iniciantes. No entanto, com os cuidados
+                        adequados, elas podem florescer por muitos anos. Neste
+                        guia, vamos desmistificar o cultivo de orquídeas e
+                        compartilhar dicas práticas para o sucesso.
+                      </p>
+                      <a href="#" class="btn btn-primary">Leia mais</a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="blog-post card mb-4">
+                <div class="card-body">
+                  <h2 class="blog-post-title">
+                    Adubação natural: como fazer compostagem em casa
+                  </h2>
+                  <p class="blog-post-meta text-muted">
+                    28 de Janeiro, 2025 por <a href="#">Carlos Mendes</a> |
+                    <span class="badge bg-success">Adubação</span>
+                  </p>
+                  <div class="row">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                      <img
+                        src="../assets/img/categories/adubacao/composteira.jpg"
+                        alt="Composteira doméstica"
+                        class="img-fluid rounded"
+                      />
+                    </div>
+                    <div class="col-md-8">
+                      <p>
+                        A compostagem é uma forma sustentável de transformar
+                        resíduos orgânicos em adubo de alta qualidade para suas
+                        plantas. Neste artigo, vamos ensinar passo a passo como
+                        montar e manter uma composteira em casa, mesmo em
+                        espaços pequenos.
+                      </p>
+                      <a href="#" class="btn btn-primary">Leia mais</a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Paginação -->
+            <nav aria-label="Navegação de páginas">
+              <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                  <a
+                    class="page-link"
+                    href="#"
+                    tabindex="-1"
+                    aria-disabled="true"
+                    >Anterior</a
+                  >
+                </li>
+                <li class="page-item active" aria-current="page">
+                  <a class="page-link" href="#">1</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#">Próxima</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="col-lg-4">
+            <aside class="sidebar">
+              <!-- Pesquisa -->
+              <div class="card mb-4">
+                <div class="card-body">
+                  <h5 class="card-title">Pesquisar</h5>
+                  <div class="input-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Buscar no blog..."
+                    />
+                    <button class="btn btn-outline-success" type="button">
+                      <i class="fas fa-search"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Sobre o Blog -->
+              <div class="card mb-4">
+                <div class="card-body">
+                  <h5 class="card-title">Sobre o Blog</h5>
+                  <p class="card-text">
+                    O Cantinho Verde é um blog dedicado a compartilhar dicas e
+                    conhecimentos sobre o cuidado com plantas, cultivo, adubação
+                    e muito mais.
+                  </p>
+                  <a href="about.html" class="btn btn-outline-success"
+                    >Saiba mais</a
+                  >
+                </div>
+              </div>
+
+              <!-- Categorias -->
+              <div class="card mb-4">
+                <div class="card-body">
+                  <h5 class="card-title">Categorias</h5>
+                  <ul class="list-group list-group-flush">
+                    <li
+                      class="list-group-item d-flex justify-content-between align-items-center"
+                    >
+                      <a href="#" class="text-decoration-none">Suculentas</a>
+                      <span class="badge bg-success rounded-pill">14</span>
+                    </li>
+                    <li
+                      class="list-group-item d-flex justify-content-between align-items-center"
+                    >
+                      <a href="#" class="text-decoration-none">Orquídeas</a>
+                      <span class="badge bg-success rounded-pill">8</span>
+                    </li>
+                    <li
+                      class="list-group-item d-flex justify-content-between align-items-center"
+                    >
+                      <a href="#" class="text-decoration-none"
+                        >Plantas Ornamentais</a
+                      >
+                      <span class="badge bg-success rounded-pill">10</span>
+                    </li>
+                    <li
+                      class="list-group-item d-flex justify-content-between align-items-center"
+                    >
+                      <a href="#" class="text-decoration-none">Adubação</a>
+                      <span class="badge bg-success rounded-pill">6</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Posts Populares -->
+              <div class="card mb-4">
+                <div class="card-body">
+                  <h5 class="card-title">Posts Populares</h5>
+                  <div class="list-group list-group-flush">
+                    <a
+                      href="#"
+                      class="list-group-item list-group-item-action py-3"
+                    >
+                      <div class="d-flex w-100 justify-content-between">
+                        <h6 class="mb-1">10 suculentas para iniciantes</h6>
+                      </div>
+                      <small class="text-muted">3 mil visualizações</small>
+                    </a>
+                    <a
+                      href="#"
+                      class="list-group-item list-group-item-action py-3"
+                    >
+                      <div class="d-flex w-100 justify-content-between">
+                        <h6 class="mb-1">Como fazer mudas de plantas</h6>
+                      </div>
+                      <small class="text-muted">2,5 mil visualizações</small>
+                    </a>
+                    <a
+                      href="#"
+                      class="list-group-item list-group-item-action py-3"
+                    >
+                      <div class="d-flex w-100 justify-content-between">
+                        <h6 class="mb-1">Adubos caseiros para suas plantas</h6>
+                      </div>
+                      <small class="text-muted">1,8 mil visualizações</small>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer bg-light text-center py-4">
+      <div class="container">
+        <p class="mb-0">
+          &copy; <time datetime="2025">2025</time> Cantinho Verde. Todos os
+          direitos reservados.
+        </p>
+        <p class="mb-0">
+          <a href="./legal/privacy.html">Política de Privacidade</a> |
+          <a href="./legal/terms.html">Termos de Serviço</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="./js/app.js"></script>
+  </body>
+</html>
