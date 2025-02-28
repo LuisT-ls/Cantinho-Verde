@@ -1,0 +1,25 @@
+:root {
+  /* Cores */
+  --color-primary: #4caf50; /* Verde */
+  --color-primary-dark: #45a049;
+  --color-secondary: #ffc107; /* Amarelo */
+  --color-background: #f4f4f4;
+  --color-white: #ffffff;
+  --color-text: #333333;
+  --color-text-light: #666666;
+
+  /* Fontes */
+  --font-primary: 'Open Sans', sans-serif;
+  --font-secondary: 'Roboto', sans-serif;
+
+  /* Espaçamentos */
+  --spacing-small: 8px;
+  --spacing-medium: 16px;
+  --spacing-large: 24px;
+
+  /* Bordas */
+  --border-radius: 8px;
+
+  /* Sombras */
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

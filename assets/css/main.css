@@ -1,13 +1,93 @@
+/* main.css */
+/* Importações dos módulos CSS */
+@import './modules/base/reset.css';
+@import './modules/base/variables.css';
+@import './modules/base/typography.css';
+@import './modules/base/animations.css';
+@import './modules/base/scrollbar.css';
+
+@import './modules/layout/container.css';
+@import './modules/layout/header.css';
+@import './modules/layout/footer.css';
+@import './modules/layout/grid.css';
+
+@import './modules/components/buttons.css';
+@import './modules/components/icon.css';
+
+@import './modules/utils/responsive.css';
+@import './modules/utils/spacing.css';
+
 /* Estilos globais */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
+  font-family: var(--font-primary);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  line-height: 1.6;
 }
 
-/* Espaçamento adicional para o footer */
-main {
-  padding-bottom: 60px; /* Evita que o footer cubra o conteúdo */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}
+
+/* Estilos específicos para o blog */
+.blog-post {
+  background-color: var(--color-white);
+  padding: var(--spacing-medium);
+  margin-bottom: var(--spacing-large);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.blog-post-title {
+  font-size: var(--font-size-large);
+  color: var(--color-primary);
+}
+
+.blog-post-meta {
+  font-size: var(--font-size-small);
+  color: var(--color-text-light);
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--spacing-small) var(--spacing-medium);
+  border-radius: var(--border-radius);
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+}
+
+.sidebar .card {
+  margin-bottom: var(--spacing-medium);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.sidebar .card-title {
+  font-size: var(--font-size-medium);
+  color: var(--color-primary);
+}
+
+.sidebar .list-group-item {
+  border: none;
+  padding: var(--spacing-small) 0;
+}
+
+.sidebar .list-group-item a {
+  color: var(--color-text);
+}
+
+.sidebar .list-group-item a:hover {
+  color: var(--color-primary);
 }
