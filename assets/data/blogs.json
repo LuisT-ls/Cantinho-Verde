@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "title": "Como cuidar de suculentas",
+    "author": "LuisT-ls",
+    "date": "2025-01-01",
+    "category": "suculentas",
+    "image": "../assets/img/categories/suculentas/suculenta-vaso.jpg",
+    "content": "As suculentas são plantas que armazenam água em suas folhas, caules e raízes. Elas são fáceis de cuidar e perfeitas para quem está começando no mundo das plantas."
+  },
+  {
+    "id": 2,
+    "title": "Guia completo de orquídeas para iniciantes",
+    "author": "Ana Silva",
+    "date": "2025-01-15",
+    "category": "orquideas",
+    "image": "../assets/img/categories/orquideas/orquideas.jpg",
+    "content": "Orquídeas são plantas encantadoras que costumam intimidar os iniciantes. No entanto, com os cuidados adequados, elas podem florescer por muitos anos."
+  },
+  {
+    "id": 3,
+    "title": "Adubação natural: como fazer compostagem em casa",
+    "author": "Carlos Mendes",
+    "date": "2025-01-28",
+    "category": "adubacao",
+    "image": "../assets/img/categories/adubacao/composteira.jpg",
+    "content": "A compostagem é uma forma sustentável de transformar resíduos orgânicos em adubo de alta qualidade para suas plantas."
+  },
+  {
+    "id": 4,
+    "title": "10 suculentas para iniciantes",
+    "author": "LuisT-ls",
+    "date": "2025-02-10",
+    "category": "suculentas",
+    "image": "../assets/img/categories/suculentas/suculenta-iniciante.jpg",
+    "content": "Se você está começando no mundo das suculentas, aqui estão 10 espécies fáceis de cuidar."
+  },
+  {
+    "id": 5,
+    "title": "Como fazer mudas de plantas",
+    "author": "Ana Silva",
+    "date": "2025-02-20",
+    "category": "ornamentais",
+    "image": "../assets/img/categories/ornamentais/mudas.jpg",
+    "content": "Aprenda a fazer mudas de plantas ornamentais e expanda sua coleção de forma econômica."
+  },
+  {
+    "id": 6,
+    "title": "Guia completo de orquídeas para iniciantes",
+    "author": "Carlos Mendes",
+    "date": "2025-02-28",
+    "category": "orquideas",
+    "image": "../assets/img/categories/orquideas/orquideas.jpg",
+    "content": "Orquídeas são plantas encantadoras que costumam intimidar os iniciantes. No entanto, com os cuidados adequados, elas podem florescer por muitos anos."
+  },
+  {
+    "id": 7,
+    "title": "Adubação natural: como fazer compostagem em casa",
+    "author": "LuisT-ls",
+    "date": "2025-03-10",
+    "category": "adubacao",
+    "image": "../assets/img/categories/adubacao/composteira.jpg",
+    "content": "A compostagem é uma forma sustentável de transformar resíduos orgânicos em adubo de alta qualidade para suas plantas."
+  },
+  {
+    "id": 8,
+    "title": "10 suculentas para iniciantes",
+    "author": "Ana Silva",
+    "date": "2025-03-20",
+    "category": "suculentas",
+    "image": "../assets/img/categories/suculentas/suculenta-iniciante.jpg",
+    "content": "Se você está commencendo no mundo das suculentas, aqui estão 10 espécies fáceis de cuidar."
+  },
+  {
+    "id": 9,
+    "title": "Como fazer mudas de plantas",
+    "author": "Carlos Mendes",
+    "date": "2025-03-28",
+    "category": "ornamentais",
+    "image": "../assets/img/categories/ornamentais/mudas.jpg",
+    "content": "Aprenda a fazer mudas de plantas ornamentais e expanda sua coleção de forma econômica."
+  },
+  {
+    "id": 10,
+    "title": "Guia completo de orquídeas para iniciantes",
+    "author": "LuisT-ls",
+    "date": "2025-04-10",
+    "category": "orquideas",
+    "image": "../assets/img/categories/orquideas/orquideas.jpg",
+    "content": "Orquídeas são plantas encantadoras que costumam intimidar os iniciantes. No entanto, com os cuidados adequados, elas podem florescer por muitos anos."
+  }
+]

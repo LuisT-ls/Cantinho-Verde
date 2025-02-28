@@ -1,12 +1,17 @@
-/**
- * Cantinho Verde - Main JavaScript
- */
+// ./js/app.js
+
+import { initBlog } from './modules/ui/blog.js'
+import { initRouting } from './modules/ui/routing.js'
+import { initSearch } from './modules/ui/search.js'
 
 document.addEventListener('DOMContentLoaded', function () {
   // Initialize components
   initNavbar()
   initAnimations()
   initServiceWorker()
+  initBlog()
+  initRouting()
+  initSearch()
 })
 
 /**

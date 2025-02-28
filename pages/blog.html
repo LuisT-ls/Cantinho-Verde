@@ -48,7 +48,7 @@
     <link rel="stylesheet" href="../assets/css/main.css" />
 
     <!-- Manifest -->
-    <link rel="manifest" href="./manifest.json" />
+    <link rel="manifest" href="../manifest.json" />
 
     <title>Blog - Cantinho Verde</title>
   </head>
@@ -112,19 +112,39 @@
                 role="group"
                 aria-label="Filtrar por categoria"
               >
-                <button type="button" class="btn btn-success active">
+                <button
+                  type="button"
+                  class="btn btn-success active"
+                  data-category="todas"
+                >
                   Todas
                 </button>
-                <button type="button" class="btn btn-outline-success">
+                <button
+                  type="button"
+                  class="btn btn-outline-success"
+                  data-category="suculentas"
+                >
                   Suculentas
                 </button>
-                <button type="button" class="btn btn-outline-success">
+                <button
+                  type="button"
+                  class="btn btn-outline-success"
+                  data-category="orquideas"
+                >
                   Orquídeas
                 </button>
-                <button type="button" class="btn btn-outline-success">
+                <button
+                  type="button"
+                  class="btn btn-outline-success"
+                  data-category="ornamentais"
+                >
                   Plantas Ornamentais
                 </button>
-                <button type="button" class="btn btn-outline-success">
+                <button
+                  type="button"
+                  class="btn btn-outline-success"
+                  data-category="adubacao"
+                >
                   Adubação
                 </button>
               </div>
@@ -133,7 +153,7 @@
             <!-- Filtro por categorias (mobile) -->
             <div class="d-md-none mb-4">
               <select class="form-select" aria-label="Filtrar por categoria">
-                <option selected>Todas as categorias</option>
+                <option value="todas" selected>Todas as categorias</option>
                 <option value="suculentas">Suculentas</option>
                 <option value="orquideas">Orquídeas</option>
                 <option value="ornamentais">Plantas Ornamentais</option>
@@ -143,96 +163,7 @@
 
             <!-- Artigos do blog -->
             <div class="blog-posts">
-              <article class="blog-post card mb-4">
-                <div class="card-body">
-                  <h2 class="blog-post-title">Como cuidar de suculentas</h2>
-                  <p class="blog-post-meta text-muted">
-                    1 de Janeiro, 2025 por <a href="#">LuisT-ls</a> |
-                    <span class="badge bg-success">Suculentas</span>
-                  </p>
-                  <div class="row">
-                    <div class="col-md-4 mb-3 mb-md-0">
-                      <img
-                        src="../assets/img/categories/suculentas/suculenta-vaso.jpg"
-                        alt="Suculentas em vasos"
-                        class="img-fluid rounded"
-                      />
-                    </div>
-                    <div class="col-md-8">
-                      <p>
-                        As suculentas são plantas que armazenam água em suas
-                        folhas, caules e raízes. Elas são fáceis de cuidar e
-                        perfeitas para quem está começando no mundo das plantas.
-                        Neste artigo, vamos explorar os cuidados básicos para
-                        manter suas suculentas saudáveis.
-                      </p>
-                      <a href="#" class="btn btn-primary">Leia mais</a>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="blog-post card mb-4">
-                <div class="card-body">
-                  <h2 class="blog-post-title">
-                    Guia completo de orquídeas para iniciantes
-                  </h2>
-                  <p class="blog-post-meta text-muted">
-                    15 de Janeiro, 2025 por <a href="#">Ana Silva</a> |
-                    <span class="badge bg-success">Orquídeas</span>
-                  </p>
-                  <div class="row">
-                    <div class="col-md-4 mb-3 mb-md-0">
-                      <img
-                        src="../assets/img/categories/orquideas/orquideas.jpg"
-                        alt="Orquídea phalaenopsis"
-                        class="img-fluid rounded"
-                      />
-                    </div>
-                    <div class="col-md-8">
-                      <p>
-                        Orquídeas são plantas encantadoras que costumam
-                        intimidar os iniciantes. No entanto, com os cuidados
-                        adequados, elas podem florescer por muitos anos. Neste
-                        guia, vamos desmistificar o cultivo de orquídeas e
-                        compartilhar dicas práticas para o sucesso.
-                      </p>
-                      <a href="#" class="btn btn-primary">Leia mais</a>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="blog-post card mb-4">
-                <div class="card-body">
-                  <h2 class="blog-post-title">
-                    Adubação natural: como fazer compostagem em casa
-                  </h2>
-                  <p class="blog-post-meta text-muted">
-                    28 de Janeiro, 2025 por <a href="#">Carlos Mendes</a> |
-                    <span class="badge bg-success">Adubação</span>
-                  </p>
-                  <div class="row">
-                    <div class="col-md-4 mb-3 mb-md-0">
-                      <img
-                        src="../assets/img/categories/adubacao/composteira.jpg"
-                        alt="Composteira doméstica"
-                        class="img-fluid rounded"
-                      />
-                    </div>
-                    <div class="col-md-8">
-                      <p>
-                        A compostagem é uma forma sustentável de transformar
-                        resíduos orgânicos em adubo de alta qualidade para suas
-                        plantas. Neste artigo, vamos ensinar passo a passo como
-                        montar e manter uma composteira em casa, mesmo em
-                        espaços pequenos.
-                      </p>
-                      <a href="#" class="btn btn-primary">Leia mais</a>
-                    </div>
-                  </div>
-                </div>
-              </article>
+              <!-- Os posts serão renderizados aqui dinamicamente -->
             </div>
 
             <!-- Paginação -->
@@ -301,28 +232,46 @@
                     <li
                       class="list-group-item d-flex justify-content-between align-items-center"
                     >
-                      <a href="#" class="text-decoration-none">Suculentas</a>
-                      <span class="badge bg-success rounded-pill">14</span>
+                      <a
+                        href="#"
+                        class="text-decoration-none category-link"
+                        data-category="suculentas"
+                        >Suculentas</a
+                      >
+                      <span class="badge bg-success rounded-pill">0</span>
                     </li>
                     <li
                       class="list-group-item d-flex justify-content-between align-items-center"
                     >
-                      <a href="#" class="text-decoration-none">Orquídeas</a>
-                      <span class="badge bg-success rounded-pill">8</span>
+                      <a
+                        href="#"
+                        class="text-decoration-none category-link"
+                        data-category="orquideas"
+                        >Orquídeas</a
+                      >
+                      <span class="badge bg-success rounded-pill">0</span>
                     </li>
                     <li
                       class="list-group-item d-flex justify-content-between align-items-center"
                     >
-                      <a href="#" class="text-decoration-none"
+                      <a
+                        href="#"
+                        class="text-decoration-none category-link"
+                        data-category="ornamentais"
                         >Plantas Ornamentais</a
                       >
-                      <span class="badge bg-success rounded-pill">10</span>
+                      <span class="badge bg-success rounded-pill">0</span>
                     </li>
                     <li
                       class="list-group-item d-flex justify-content-between align-items-center"
                     >
-                      <a href="#" class="text-decoration-none">Adubação</a>
-                      <span class="badge bg-success rounded-pill">6</span>
+                      <a
+                        href="#"
+                        class="text-decoration-none category-link"
+                        data-category="adubacao"
+                        >Adubação</a
+                      >
+                      <span class="badge bg-success rounded-pill">0</span>
                     </li>
                   </ul>
                 </div>
@@ -387,6 +336,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 
     <!-- Custom JS -->
-    <script src="./js/app.js"></script>
+    <script type="module" src="../js/app.js"></script>
   </body>
 </html>
