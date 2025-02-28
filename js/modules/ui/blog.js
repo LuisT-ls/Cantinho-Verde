@@ -4,7 +4,7 @@ export const initBlog = () => {
   const blogContainer = document.querySelector('.blog-posts')
   const categoryButtons = document.querySelectorAll('.btn-group .btn')
   const categorySelect = document.querySelector('.form-select')
-  const pagination = document.querySelector('.pagination')
+  const pagination = document.querySelector('nav .pagination')
   const searchInput = document.querySelector('.form-control')
   const searchButton = document.querySelector('.btn-outline-success')
 
@@ -30,6 +30,11 @@ export const initBlog = () => {
 
   // Renderiza os posts na tela
   const renderPosts = () => {
+    if (!blogContainer) {
+      console.error('Elemento .blog-posts não encontrado no DOM.')
+      return
+    }
+
     const start = (currentPage - 1) * postsPerPage
     const end = start + postsPerPage
     const postsToShow = filteredPosts.slice(start, end)
@@ -64,7 +69,9 @@ export const initBlog = () => {
 
   // Filtra os posts por categoria
   const normalizeCategory = category => {
+    if (!category) return ''
     return category
+      .toString()
       .trim()
       .toLowerCase()
       .normalize('NFD') // Remove acentos
@@ -76,7 +83,7 @@ export const initBlog = () => {
     console.log('Categoria selecionada:', normalizedCategory)
 
     if (normalizedCategory === 'todas') {
-      filteredPosts = allPosts
+      filteredPosts = [...allPosts]
     } else {
       filteredPosts = allPosts.filter(post => {
         const postCategory = normalizeCategory(post.category)
@@ -99,6 +106,7 @@ export const initBlog = () => {
   // Atualiza a contagem de posts por categoria
   const updateCategoryCounts = () => {
     const counts = {
+      todas: allPosts.length,
       suculentas: allPosts.filter(
         post => normalizeCategory(post.category) === 'suculentas'
       ).length,
@@ -114,30 +122,26 @@ export const initBlog = () => {
     }
 
     // Atualiza os contadores na sidebar
-    document.querySelectorAll('.list-group-item .badge').forEach(badge => {
-      const category = normalizeCategory(
-        badge.previousElementSibling.textContent
-      )
-      badge.textContent = counts[category] || 0
-    })
+    const badges = document.querySelectorAll('.list-group-item .badge')
+    if (badges.length) {
+      badges.forEach(badge => {
+        const category = normalizeCategory(
+          badge.previousElementSibling.textContent
+        )
+        badge.textContent = counts[category] || 0
+      })
+    }
   }
-
-  // Seleciona todos os links de categoria na sidebar
-  const categoryLinks = document.querySelectorAll('.category-link')
-
-  // Adiciona event listeners aos links de categoria
-  categoryLinks.forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault() // Evita o comportamento padrão do link
-      const selectedCategory = link.getAttribute('data-category') // Obtém a categoria selecionada
-      filterPostsByCategory(selectedCategory) // Filtra os posts pela categoria selecionada
-    })
-  })
 
   // Atualiza a paginação
   const updatePagination = () => {
+    if (!pagination) {
+      console.error('Elemento .pagination não encontrado no DOM.')
+      return
+    }
+
     const totalPages = Math.ceil(filteredPosts.length / postsPerPage)
-    const paginationList = pagination.querySelector('ul')
+    const paginationList = pagination
     const previousButton = paginationList.querySelector(
       '.page-item:first-child'
     )
@@ -171,49 +175,67 @@ export const initBlog = () => {
     nextButton.classList.toggle('disabled', currentPage === totalPages)
   }
 
-  // Event listeners para botões de categoria (desktop)
-  categoryButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      // Remove a classe 'active' de todos os botões
-      categoryButtons.forEach(btn => btn.classList.remove('active'))
-      // Adiciona a classe 'active' ao botão clicado
-      button.classList.add('active')
-      // Obtém a categoria do botão clicado
-      const selectedCategory = button.getAttribute('data-category')
-      // Filtra os posts pela categoria selecionada
-      filterPostsByCategory(selectedCategory)
+  // Seleciona todos os links de categoria na sidebar
+  const categoryLinks = document.querySelectorAll('.category-link')
+
+  // Adiciona event listeners aos links de categoria
+  if (categoryLinks.length) {
+    categoryLinks.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault() // Evita o comportamento padrão do link
+        const selectedCategory = link.getAttribute('data-category') // Obtém a categoria selecionada
+        filterPostsByCategory(selectedCategory) // Filtra os posts pela categoria selecionada
+      })
     })
-  })
+  }
+
+  // Event listeners para botões de categoria (desktop)
+  if (categoryButtons.length) {
+    categoryButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        console.log(
+          'Botão clicado:',
+          button.textContent.trim(),
+          'categoria:',
+          button.getAttribute('data-category')
+        )
+        // Remove a classe 'active' de todos os botões
+        categoryButtons.forEach(btn => btn.classList.remove('active'))
+        // Adiciona a classe 'active' ao botão clicado
+        button.classList.add('active')
+        // Obtém a categoria do botão clicado
+        const selectedCategory = button.getAttribute('data-category')
+        // Filtra os posts pela categoria selecionada
+        filterPostsByCategory(selectedCategory)
+      })
+    })
+  }
 
   // Event listener para select de categoria (mobile)
-  categorySelect.addEventListener('change', e => {
-    const selectedCategory = e.target.value
-    filterPostsByCategory(selectedCategory)
-  })
+  if (categorySelect) {
+    categorySelect.addEventListener('change', e => {
+      const selectedCategory = e.target.value
+      filterPostsByCategory(selectedCategory)
+    })
+  }
 
   // Event listener para pesquisa
-  searchButton.addEventListener('click', () => {
-    const query = searchInput.value.toLowerCase()
-    filteredPosts = allPosts.filter(
-      post =>
-        post.title.toLowerCase().includes(query) ||
-        post.content.toLowerCase().includes(query)
-    )
-    currentPage = 1 // Resetar para a primeira página após pesquisar
-    renderPosts()
-    updatePagination()
-  })
+  if (searchButton && searchInput) {
+    searchButton.addEventListener('click', () => {
+      const query = searchInput.value.toLowerCase()
+      filteredPosts = allPosts.filter(
+        post =>
+          post.title.toLowerCase().includes(query) ||
+          post.content.toLowerCase().includes(query)
+      )
+      currentPage = 1 // Resetar para a primeira página após pesquisar
+      renderPosts()
+      updatePagination()
+    })
+  }
 
   // Event listener para paginação
-  document.addEventListener('DOMContentLoaded', () => {
-    const pagination = document.querySelector('.pagination')
-
-    if (!pagination) {
-      console.error('Elemento .pagination não encontrado no DOM.')
-      return
-    }
-
-    // Event listener para paginação
+  if (pagination) {
     pagination.addEventListener('click', e => {
       e.preventDefault()
 
@@ -222,6 +244,7 @@ export const initBlog = () => {
       if (!pageLink) return // Ignora cliques fora dos links de paginação
 
       const pageText = pageLink.textContent.toLowerCase()
+      console.log('Clique na paginação:', pageText)
 
       // Lógica de navegação
       if (pageText === 'anterior' && currentPage > 1) {
@@ -245,7 +268,7 @@ export const initBlog = () => {
       renderPosts()
       updatePagination()
     })
-  })
+  }
 
   // Inicializa o blog
   loadPosts()
